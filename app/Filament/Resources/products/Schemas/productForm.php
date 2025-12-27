@@ -13,12 +13,14 @@ class productForm
             ->components([
                 TextInput::make('name')
                     ->required()
+                    ->unique()
                     ->maxLength(255),
                 TextInput::make('price')
                     ->required()
                     ->numeric(),
                 TextInput::make('description')
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->nullable(),
             ]);
     }
 }
