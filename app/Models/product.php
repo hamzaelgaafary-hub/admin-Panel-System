@@ -15,6 +15,7 @@ class product extends Model
         'name',
         'price',
         'description',
+        'status',
     ];
 
     public function user(): HasMany

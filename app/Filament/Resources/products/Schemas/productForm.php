@@ -4,6 +4,8 @@ namespace App\Filament\Resources\products\Schemas;
 
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
+use App\Enum\ProductStatusEnum;
 
 class productForm
 {
@@ -21,6 +23,9 @@ class productForm
                 TextInput::make('description')
                     ->maxLength(255)
                     ->nullable(),
+                Select::make('status')
+                    ->options(ProductStatusEnum::class)
+                    ->required(),
             ]);
     }
 }

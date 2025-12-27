@@ -25,7 +25,8 @@ class productsTable
                 ->sortable(),
                 TextColumn::make('description')
                 ->sortable(),
-                ImageColumn::make('image')
+                TextColumn::make('status')
+                ->badge()
                 ->sortable(),
             ])
             ->filters([
